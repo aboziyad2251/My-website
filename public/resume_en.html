@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV - Mohammad Abotargah</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=calibri:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #0A192F;
+            --secondary: #FF5F15;
+            --text: #333;
+            --text-light: #666;
+            --border: #ddd;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Calibri', 'Inter', sans-serif;
+            background: #f5f5f5;
+            color: var(--text);
+            line-height: 1.5;
+            font-size: 11pt;
+            -webkit-print-color-adjust: exact;
+        }
+
+        .page {
+            background: white;
+            width: 210mm;
+            min-height: 297mm;
+            margin: 20px auto;
+            padding: 15mm 20mm;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Header */
+        header {
+            border-bottom: 2px solid var(--primary);
+            padding-bottom: 20px;
+            margin-bottom: 25px;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+
+        .header-main h1 {
+            font-size: 24pt;
+            text-transform: uppercase;
+            color: var(--primary);
+            letter-spacing: 1px;
+            margin-bottom: 5px;
+        }
+
+        .header-main p {
+            font-size: 10pt;
+            color: var(--text-light);
+            font-weight: 500;
+        }
+
+        .contact-info {
+            text-align: right;
+            font-size: 10pt;
+        }
+
+        .contact-item {
+            margin-bottom: 3px;
+        }
+
+        .contact-item a {
+            color: var(--text);
+            text-decoration: none;
+        }
+
+        .whatsapp-tag {
+            background-color: #25D366;
+            color: white;
+            padding: 1px 4px;
+            border-radius: 3px;
+            font-size: 8pt;
+            font-weight: bold;
+            margin-right: 5px;
+            vertical-align: middle;
+        }
+
+        /* Sections */
+        section {
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            font-size: 12pt;
+            text-transform: uppercase;
+            color: var(--secondary);
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 5px;
+            margin-bottom: 15px;
+            letter-spacing: 0.5px;
+        }
+
+        .summary-text {
+            text-align: justify;
+        }
+
+        /* Grid for Competencies */
+        .competencies-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+        }
+
+        .comp-group h3 {
+            font-size: 10pt;
+            color: var(--primary);
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        .comp-group p {
+            font-size: 10pt;
+            color: var(--text-light);
+        }
+
+        /* Experience Items */
+        .job-item {
+            margin-bottom: 20px;
+        }
+
+        .job-header {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 8px;
+        }
+
+        .job-title {
+            font-weight: bold;
+            font-size: 11pt;
+            color: var(--primary);
+        }
+
+        .company-meta {
+            font-weight: bold;
+        }
+
+        .job-dates {
+            color: var(--text-light);
+            font-style: italic;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        li {
+            position: relative;
+            padding-left: 15px;
+            margin-bottom: 5px;
+            color: #444;
+        }
+
+        li::before {
+            content: '•';
+            color: var(--secondary);
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+        }
+
+        /* Projects */
+        .project-item {
+            margin-bottom: 15px;
+        }
+
+        .project-name {
+            font-weight: bold;
+            color: var(--primary);
+        }
+
+        /* Education */
+        .edu-item {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 5px;
+        }
+
+        /* Print Settings */
+        @media print {
+            body {
+                background: white;
+            }
+
+            .page {
+                margin: 0;
+                box-shadow: none;
+                padding: 15mm 20mm;
+                width: 100%;
+            }
+
+            .no-print {
+                display: none;
+            }
+        }
+
+        .download-btn {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: var(--secondary);
+            color: white;
+            padding: 15px 30px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            cursor: pointer;
+            z-index: 100;
+        }
+    </style>
+</head>
+
+<body>
+
+    <a href="javascript:window.print()" class="download-btn no-print">Save as PDF</a>
+
+    <div class="page">
+        <!-- Header -->
+        <header>
+            <div class="header-main">
+                <h1>Mohammad Abotargah</h1>
+                <p>Senior Operations Professional & AI Integration Specialist</p>
+            </div>
+            <div class="contact-info">
+                <div class="contact-item">Jeddah, Saudi Arabia</div>
+                <div class="contact-item"><a href="mailto:tarj123@gmail.com">tarj123@gmail.com</a></div>
+                <div class="contact-item">
+                    <span class="whatsapp-tag">WA</span>
+                    +966 530 656 998
+                </div>
+                <div class="contact-item"><a
+                        href="https://linkedin.com/in/mohammad-abotargah">linkedin.com/in/mohammad-abotargah</a></div>
+            </div>
+        </header>
+
+        <!-- Summary -->
+        <section>
+            <h2>Professional Summary</h2>
+            <p class="summary-text">
+                Results-oriented <strong>Senior Operations Professional</strong> with over 15 years of
+                boots-on-the-ground experience at SABIC. Proven track record of transitioning from high-stakes
+                industrial operations to <strong>AI-driven process optimization</strong> and strategic project
+                management. <strong>PMP-certified</strong> leader capable of bridging technical engineering gaps with
+                modern digital solutions. Demonstrated success as an <strong>Acting Manager</strong>, leading
+                cross-functional teams to achieve significant operational efficiencies and cost reductions.
+            </p>
+        </section>
+
+        <!-- Competencies -->
+        <section>
+            <h2>Core Competencies</h2>
+            <div class="competencies-grid">
+                <div class="comp-group">
+                    <h3>AI & Technology</h3>
+                    <p>Generative AI, Prompt Engineering, Predictive Analytics, Digital Transformation.</p>
+                </div>
+                <div class="comp-group">
+                    <h3>Operations & Strategy</h3>
+                    <p>Process Optimization (Six Sigma), KPI Development, SAP, Cost Control.</p>
+                </div>
+                <div class="comp-group">
+                    <h3>Project Management</h3>
+                    <p>Full Lifecycle (PMP), Risk Management, Stakeholder Analysis, Turnaround Planning.</p>
+                </div>
+                <div class="comp-group">
+                    <h3>Safety & Leadership</h3>
+                    <p>NEBOSH, SHEMS, Team Mentoring, Change Management, Emergency Response.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience -->
+        <section>
+            <h2>Professional Experience</h2>
+
+            <div class="job-item">
+                <div class="job-header">
+                    <span class="company-meta">SABIC | Jeddah, KSA</span>
+                    <span class="job-dates">2008 – 2024</span>
+                </div>
+
+                <div style="margin-bottom: 10px;">
+                    <div class="job-title">Operational Specialist (Acting Manager & AI Integration Lead)</div>
+                    <ul>
+                        <li>Spearheaded AI integration initiatives, developing Generative AI training modules for
+                            project reporting.</li>
+                        <li>Delivered <strong>$200k in annual cost savings</strong> and a <strong>15% reduction in power
+                                consumption</strong> through rigorous process re-engineering.</li>
+                        <li>Served as Acting Manager, overseeing daily operations, budget allocation, and resource
+                            planning for a team of 15+.</li>
+                        <li>Implemented predictive maintenance schedules that reduced equipment downtime by 10%.</li>
+                    </ul>
+                </div>
+
+                <div style="margin-bottom: 10px;">
+                    <div class="job-title">DCS Senior Operator / Operation Team Lead</div>
+                    <ul>
+                        <li>Led a shift team of 10+ operators, consistently exceeding targets while maintaining zero
+                            safety incidents.</li>
+                        <li>Achieved a <strong>15% increase in overall productivity</strong> by optimizing workflow
+                            procedures.</li>
+                        <li>Mentored junior operators, resulting in a 30% reduction in training time for new hires.</li>
+                    </ul>
+                </div>
+
+                <div>
+                    <div class="job-title">Public Safety & Emergency Response Officer (Concurrent)</div>
+                    <ul>
+                        <li>Managed site-wide risk assessments and emergency response protocols as a first responder.
+                        </li>
+                        <li>Conducted regular safety drills and audits, ensuring 100% compliance with SHEMS/NEBOSH
+                            standards.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Key Projects -->
+        <section>
+            <h2>Key Projects</h2>
+            <div class="project-item">
+                <span class="project-name">Ethylene Glycol GRIP Project:</span>
+                Delivered <strong>$20M in total savings</strong> through strategic cost-optimization and strict
+                adherence to safety protocols during a major facility upgrade.
+            </div>
+            <div class="project-item">
+                <span class="project-name">Polymer Turnaround Initiative:</span>
+                Coordinated a critical <strong>$2M maintenance turnaround</strong>, completing the project <strong>5
+                    days ahead of schedule</strong> with zero downtime.
+            </div>
+        </section>
+
+        <!-- Education & Certifications -->
+        <section>
+            <h2>Education & Certifications</h2>
+
+            <div style="margin-bottom: 15px;">
+                <div class="edu-item">
+                    <strong>Bachelor of Project Management (Expected Dec 2026)</strong>
+                    <span>Midocean University</span>
+                </div>
+                <div class="edu-item">
+                    <strong>Associate's Degree in Manufacturing Engineering</strong>
+                    <span>Yanbu Industrial College</span>
+                </div>
+            </div>
+
+            <div class="competencies-grid">
+                <div>
+                    <ul>
+                        <li>PMP (Project Management Professional)</li>
+                        <li>IBM Generative AI for Project Managers</li>
+                        <li>Google Project Management Professional</li>
+                    </ul>
+                </div>
+                <div>
+                    <ul>
+                        <li>NEBOSH Health and Safety Management</li>
+                        <li>SHEMS Diploma (SABIC)</li>
+                        <li>Train of Trainers (TOT) - Certified</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </div>
+</body>
+
+</html>

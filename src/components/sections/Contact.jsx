@@ -3,7 +3,7 @@ import './Contact.css';
 import { useTheme } from '../../context/ThemeContext';
 
 const Contact = () => {
-    const { t } = useTheme();
+    const { t, lang } = useTheme(); // get lang
     return (
         <section id="contact" className="section contact-section">
             <div className="container contact-content">
@@ -29,7 +29,7 @@ const Contact = () => {
 
                 <div className="contact-actions">
                     <a href="mailto:tarj123@gmail.com" className="btn btn-fill btn-lg">{t('hero.cta_discuss')}</a>
-                    <a href="/resume.html" target="_blank" rel="noopener noreferrer" className="btn btn-primary btn-lg">{t('hero.cta_cv')}</a>
+                    <a href={`/resume_${lang}.html`} target="_blank" rel="noopener noreferrer" className="btn btn-primary btn-lg">{t('hero.cta_cv')}</a>
                 </div>
             </div>
         </section>

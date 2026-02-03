@@ -8,12 +8,13 @@ import Certifications from './components/sections/Certifications';
 import About from './components/sections/About';
 import Contact from './components/sections/Contact';
 import FloatingContact from './components/FloatingContact';
+import DevicePreview from './components/DevicePreview';
 import { ThemeProvider } from './context/ThemeContext';
+import './components/DevicePreview.css';
 
 function App() {
 
   useEffect(() => {
-    // Smooth scroll for anchor links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
       anchor.addEventListener('click', function (e) {
         e.preventDefault();
@@ -29,7 +30,7 @@ function App() {
 
   return (
     <ThemeProvider>
-      <div className="App">
+      <div className="App" >
         <Navbar />
         <main>
           <Hero />
@@ -41,6 +42,7 @@ function App() {
         </main>
         <Footer />
         <FloatingContact />
+        <DevicePreview />
       </div>
     </ThemeProvider>
   );

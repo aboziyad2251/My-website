@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>السيرة الذاتية - محمد أبو طرقة</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #0A192F;
+            --secondary: #FF5F15;
+            --text: #333;
+            --text-light: #666;
+            --border: #ddd;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Cairo', sans-serif;
+            background: #f5f5f5;
+            color: var(--text);
+            line-height: 1.6;
+            font-size: 11pt;
+            -webkit-print-color-adjust: exact;
+            direction: rtl;
+            text-align: right;
+        }
+
+        .page {
+            background: white;
+            width: 210mm;
+            min-height: 297mm;
+            margin: 20px auto;
+            padding: 15mm 20mm;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Header */
+        header {
+            border-bottom: 2px solid var(--primary);
+            padding-bottom: 20px;
+            margin-bottom: 25px;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+
+        .header-main h1 {
+            font-size: 24pt;
+            color: var(--primary);
+            margin-bottom: 5px;
+        }
+
+        .header-main p {
+            font-size: 11pt;
+            color: var(--text-light);
+            font-weight: 700;
+        }
+
+        .contact-info {
+            text-align: left;
+            font-size: 10pt;
+        }
+
+        .contact-item {
+            margin-bottom: 3px;
+        }
+
+        .contact-item a {
+            color: var(--text);
+            text-decoration: none;
+        }
+
+        .whatsapp-tag {
+            background-color: #25D366;
+            color: white;
+            padding: 1px 4px;
+            border-radius: 3px;
+            font-size: 8pt;
+            font-weight: bold;
+            margin-left: 5px;
+            vertical-align: middle;
+        }
+
+        /* Sections */
+        section {
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            font-size: 14pt;
+            color: var(--secondary);
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 5px;
+            margin-bottom: 15px;
+        }
+
+        .summary-text {
+            text-align: justify;
+        }
+
+        /* Grid for Competencies */
+        .competencies-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+        }
+
+        .comp-group h3 {
+            font-size: 11pt;
+            color: var(--primary);
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        .comp-group p {
+            font-size: 10pt;
+            color: var(--text-light);
+        }
+
+        /* Experience Items */
+        .job-item {
+            margin-bottom: 20px;
+        }
+
+        .job-header {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 8px;
+        }
+
+        .job-title {
+            font-weight: bold;
+            font-size: 12pt;
+            color: var(--primary);
+        }
+
+        .company-meta {
+            font-weight: bold;
+        }
+
+        .job-dates {
+            color: var(--text-light);
+            font-style: italic;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        li {
+            position: relative;
+            padding-right: 15px;
+            margin-bottom: 5px;
+            color: #444;
+        }
+
+        li::before {
+            content: '•';
+            color: var(--secondary);
+            position: absolute;
+            right: 0;
+            font-weight: bold;
+        }
+
+        /* Projects */
+        .project-item {
+            margin-bottom: 15px;
+        }
+
+        .project-name {
+            font-weight: bold;
+            color: var(--primary);
+        }
+
+        /* Education */
+        .edu-item {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 5px;
+        }
+
+        /* Print Settings */
+        @media print {
+            body {
+                background: white;
+            }
+
+            .page {
+                margin: 0;
+                box-shadow: none;
+                padding: 15mm 20mm;
+                width: 100%;
+            }
+
+            .no-print {
+                display: none;
+            }
+        }
+
+        .download-btn {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            background: var(--secondary);
+            color: white;
+            padding: 15px 30px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            cursor: pointer;
+            z-index: 100;
+        }
+    </style>
+</head>
+
+<body>
+
+    <a href="javascript:window.print()" class="download-btn no-print">حفظ كملف PDF</a>
+
+    <div class="page">
+        <!-- Header -->
+        <header>
+            <div class="header-main">
+                <h1>محمد أبو طرقة</h1>
+                <p>خبير عمليات أول ومتخصص في دمج الذكاء الاصطناعي</p>
+            </div>
+            <div class="contact-info">
+                <div class="contact-item">جدة، المملكة العربية السعودية</div>
+                <div class="contact-item"><a href="mailto:tarj123@gmail.com">tarj123@gmail.com</a></div>
+                <div class="contact-item">
+                    <span class="whatsapp-tag" dir="ltr">WA</span>
+                    <span dir="ltr">+966 530 656 998</span>
+                </div>
+                <div class="contact-item"><a
+                        href="https://linkedin.com/in/mohammad-abotargah">linkedin.com/in/mohammad-abotargah</a></div>
+            </div>
+        </header>
+
+        <!-- Summary -->
+        <section>
+            <h2>الملخص المهني</h2>
+            <p class="summary-text">
+                خبير عمليات أول موجه نحو النتائج، بخبرة ميدانية تزيد عن 15 عاماً في شركة سابك (SABIC). سجل حافل
+                بالانتقال من العمليات الصناعية عالية المخاطر إلى تحسين العمليات المعتمد على الذكاء الاصطناعي وإدارة
+                المشاريع الاستراتيجية. قائد معتمد (PMP) ومؤهل لربط الفجوات الهندسية التقنية بالحلول الرقمية الحديثة.
+                أثبتت جدارتي كمدير بالإنابة، حيث قدت فرقاً متعددة الوظائف لتحقيق كفاءة تشغيلية كبيرة وخفض التكاليف.
+            </p>
+        </section>
+
+        <!-- Competencies -->
+        <section>
+            <h2>الكفاءات الأساسية</h2>
+            <div class="competencies-grid">
+                <div class="comp-group">
+                    <h3>الذكاء الاصطناعي والتكنولوجيا</h3>
+                    <p>الذكاء الاصطناعي التوليدي (GenAI)، هندسة الأوامر (Prompt Eng)، التحليلات التنبؤية، التحول الرقمي.
+                    </p>
+                </div>
+                <div class="comp-group">
+                    <h3>العمليات والاستراتيجية</h3>
+                    <p>تحسين العمليات (Six Sigma)، تطوير مؤشرات الأداء (KPIs)، نظام SAP ERP، ضبط التكاليف الاستراتيجي.
+                    </p>
+                </div>
+                <div class="comp-group">
+                    <h3>إدارة المشاريع</h3>
+                    <p>دورة حياة كاملة (PMP)، إدارة المخاطر، تحليل أصحاب المصلحة، تخطيط الصيانات الكبرى (Turnaround).
+                    </p>
+                </div>
+                <div class="comp-group">
+                    <h3>السلامة والقيادة</h3>
+                    <p>معتمد نيبوش (NEBOSH)، دبلوم (SHEMS)، توجيه وتدريب الفرق، إدارة التغيير، الاستجابة للطوارئ.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience -->
+        <section>
+            <h2>الخبرة المهنية</h2>
+
+            <div class="job-item">
+                <div class="job-header">
+                    <span class="company-meta">سابك (SABIC) | جدة، المملكة العربية السعودية</span>
+                    <span class="job-dates">2008 – 2024</span>
+                </div>
+
+                <div style="margin-bottom: 10px;">
+                    <div class="job-title">أخصائي عمليات (مدير بالإنابة وقائد دمج الذكاء الاصطناعي)</div>
+                    <ul>
+                        <li>قدت مبادرات دمج الذكاء الاصطناعي، وطورت وحدات تدريبية للذكاء الاصطناعي التوليدي لإعداد
+                            تقارير المشاريع.</li>
+                        <li>حققت <strong>وفورات سنوية بقيمة 200 ألف دولار</strong> وتخفيضاً بنسبة <strong>15% في استهلاك
+                                الطاقة</strong> من خلال إعادة هندسة العمليات.</li>
+                        <li>عملت كمدير بالإنابة للقسم، مشرفاً على العمليات اليومية وتخصيص الميزانية وتخطيط الموارد لفريق
+                            مكون من 15+ موظفاً.</li>
+                        <li>طبقت جداول صيانة تنبؤية قللت من توقف المعدات بنسبة 10%.</li>
+                    </ul>
+                </div>
+
+                <div style="margin-bottom: 10px;">
+                    <div class="job-title">مشغل أول أنظمة تحكم (DCS) / قائد فريق تشغيل</div>
+                    <ul>
+                        <li>قدت فريق مناوبة مكون من 10+ مشغلين، متجاوزاً أهداف الإنتاج باستمرار مع الحفاظ على صفر حوادث
+                            سلامة.</li>
+                        <li>حققت <strong>زيادة في الإنتاجية العامة بنسبة 15%</strong> من خلال تحسين إجراءات العمل.</li>
+                        <li>دربت المشغلين الجدد، مما أدى لتقليل وقت التدريب بنسبة 30%.</li>
+                    </ul>
+                </div>
+
+                <div>
+                    <div class="job-title">ضابط سلامة عامة واستجابة للطوارئ (دور متزامن)</div>
+                    <ul>
+                        <li>أدرت تقييمات المخاطر للموقع وبروتوكولات الاستجابة للطوارئ كأول مستجيب للحوادث الحرجة.</li>
+                        <li>أجريت تدريبات سلامة وتدقيقات منتظمة، لضمان امتثال بنسبة 100% لمعايير SHEMS/NEBOSH.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Key Projects -->
+        <section>
+            <h2>أبرز المشاريع</h2>
+            <div class="project-item">
+                <span class="project-name">مشروع إيثيلين جلايكول GRIP:</span>
+                حققت <strong>وفورات إجمالية بقيمة 20 مليون دولار</strong> من خلال ضبط التكاليف الاستراتيجي والالتزام
+                الصارم ببروتوكولات السلامة أثناء تحديث المرفق.
+            </div>
+            <div class="project-item">
+                <span class="project-name">مبادرة صيانة البوليمر:</span>
+                نسقت مشروع صيانة حرج <strong>بقيمة 2 مليون دولار</strong>، وأتممت المشروع <strong>قبل الموعد بـ 5
+                    أيام</strong> دون أي توقف تشغيلي.
+            </div>
+        </section>
+
+        <!-- Education & Certifications -->
+        <section>
+            <h2>التعليم والشهادات</h2>
+
+            <div style="margin-bottom: 15px;">
+                <div class="edu-item">
+                    <strong>بكالوريوس إدارة المشاريع (متوقع ديسمبر 2026)</strong>
+                    <span>جامعة ميدأوشن - الإمارات العربية المتحدة</span>
+                </div>
+                <div class="edu-item">
+                    <strong>درجة مشارك في هندسة التصنيع (2008)</strong>
+                    <span>كلية ينبع الصناعية - المملكة العربية السعودية</span>
+                </div>
+            </div>
+
+            <div class="competencies-grid">
+                <div>
+                    <ul>
+                        <li>محترف إدارة المشاريع (PMP)</li>
+                        <li>الذكاء الاصطناعي التوليدي لمدراء المشاريع (IBM)</li>
+                        <li>محترف إدارة المشاريع (Google)</li>
+                    </ul>
+                </div>
+                <div>
+                    <ul>
+                        <li>نظام إدارة الصحة والسلامة (NEBOSH)</li>
+                        <li>دبلوم SHEMS (سابك)</li>
+                        <li>دورة تدريب المدربين (TOT) - معتمدة</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </div>
+</body>
+
+</html>

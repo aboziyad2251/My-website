@@ -47,8 +47,10 @@ export const translations = {
             title: "Education &",
             title_accent: "Certifications",
             edu_degree: "Bachelor of Project Management",
-            edu_school: "Midocean University",
+            edu_school: "Midocean University, UAE",
             edu_date: "Expected Dec 2026",
+            edu_assoc: "Associate's Degree in Manufacturing Engineering",
+            edu_assoc_school: "Yanbu Industrial College, Saudi Arabia (2008)",
             in_progress: "In Progress",
             cat_ai: "AI & Technology",
             cat_pm: "Project Management",
@@ -76,7 +78,8 @@ export const translations = {
             whatsapp_chat: "Chat on WhatsApp"
         },
         footer: {
-            rights: "All Rights Reserved."
+            rights: "All Rights Reserved.",
+            contact_us: "Contact Me"
         }
     },
     ar: {
@@ -127,8 +130,10 @@ export const translations = {
             title: "التعليم و",
             title_accent: "الشهادات",
             edu_degree: "بكالوريوس إدارة المشاريع",
-            edu_school: "جامعة ميدأوشن",
+            edu_school: "جامعة ميدأوشن، الإمارات",
             edu_date: "متوقع ديسمبر 2026",
+            edu_assoc: "درجة مشارك في هندسة التصنيع",
+            edu_assoc_school: "كلية ينبع الصناعية، السعودية (2008)",
             in_progress: "قيد الدراسة",
             cat_ai: "الذكاء الاصطناعي والتكنولوجيا",
             cat_pm: "إدارة المشاريع",
@@ -156,7 +161,8 @@ export const translations = {
             whatsapp_chat: "محادثة واتساب"
         },
         footer: {
-            rights: "جميع الحقوق محفوظة."
+            rights: "جميع الحقوق محفوظة.",
+            contact_us: "تواصل معي"
         }
     }
 };

@@ -4,7 +4,7 @@ import heroBg from '../../assets/hero_bg.png';
 import { useTheme } from '../../context/ThemeContext';
 
 const Hero = () => {
-    const { t } = useTheme();
+    const { t, lang } = useTheme();
 
     return (
         <section id="hero" className="hero-section">
@@ -34,7 +34,7 @@ const Hero = () => {
 
                     <div className="hero-actions">
                         <a href="#contact" className="btn btn-primary">{t('hero.cta_discuss')}</a>
-                        <a href="/resume.html" target="_blank" rel="noopener noreferrer" className="btn btn-fill">{t('hero.cta_cv')}</a>
+                        <a href={`/resume_${lang}.html`} target="_blank" rel="noopener noreferrer" className="btn btn-fill">{t('hero.cta_cv')}</a>
                     </div>
                 </div>
             </div>

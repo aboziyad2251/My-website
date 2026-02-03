@@ -10,16 +10,31 @@ const Certifications = () => {
                 <h2 className="section-title">{t('certifications.title')} <span className="text-accent">{t('certifications.title_accent')}</span></h2>
 
                 {/* Education Highlight */}
-                <div className="education-card fade-in">
-                    <div className="edu-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"></path><path d="M6 12v5c3 3 9 3 12 0v-5"></path></svg>
+                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '30px', marginBottom: '60px' }}>
+
+                    {/* Main Degree */}
+                    <div className="education-card fade-in" style={{ margin: 0 }}>
+                        <div className="edu-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"></path><path d="M6 12v5c3 3 9 3 12 0v-5"></path></svg>
+                        </div>
+                        <div className="edu-content">
+                            <h3 className="edu-degree">{t('certifications.edu_degree')}</h3>
+                            <p className="edu-school">{t('certifications.edu_school')}</p>
+                            <span className="edu-date">{t('certifications.edu_date')}</span>
+                        </div>
+                        <div className="edu-badge">{t('certifications.in_progress')}</div>
                     </div>
-                    <div className="edu-content">
-                        <h3 className="edu-degree">{t('certifications.edu_degree')}</h3>
-                        <p className="edu-school">{t('certifications.edu_school')}</p>
-                        <span className="edu-date">{t('certifications.edu_date')}</span>
+
+                    {/* Associate Degree */}
+                    <div className="education-card fade-in" style={{ margin: 0, border: '1px solid var(--color-steel)' }}>
+                        <div className="edu-icon" style={{ background: 'var(--color-steel)' }}>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" /></svg>
+                        </div>
+                        <div className="edu-content">
+                            <h3 className="edu-degree">{t('certifications.edu_assoc')}</h3>
+                            <p className="edu-school">{t('certifications.edu_assoc_school')}</p>
+                        </div>
                     </div>
-                    <div className="edu-badge">{t('certifications.in_progress')}</div>
                 </div>
 
                 {/* Certifications Grid */}
