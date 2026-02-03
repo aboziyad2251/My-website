@@ -29,6 +29,7 @@ const Navbar = () => {
           <span className="logo-text">Abotargah</span>
         </a>
 
+        {/* Desktop Links */}
         <div className={`nav-links-container ${menuOpen ? 'open' : ''}`}>
           <ul className="nav-links">
             <li><a href="#hero" onClick={() => setMenuOpen(false)}>{t('nav.home')}</a></li>
@@ -41,6 +42,12 @@ const Navbar = () => {
         </div>
 
         <div className="nav-actions">
+          {/* Phone Display (Desktop) */}
+          <a href="tel:+966530656998" className="nav-phone-link">
+            <span className="phone-icon">📞</span>
+            <span className="phone-number">+966 530 656 998</span>
+          </a>
+
           {/* Theme Toggle */}
           <button onClick={nextTheme} className="icon-btn" title="Switch Theme">
             {theme === 'light' ? '☀️' : theme === 'dark' ? '🌑' : '⚡'}

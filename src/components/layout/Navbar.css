@@ -60,7 +60,6 @@
     align-items: center;
     flex: 1;
     justify-content: center;
-    /* Center links mostly, or flex-start? */
     margin: 0 40px;
 }
 
@@ -94,6 +93,35 @@
     gap: 15px;
 }
 
+/* Phone in Navbar */
+.nav-phone-link {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--text-main);
+    font-weight: 700;
+    margin-right: 15px;
+    text-decoration: none;
+    transition: var(--transition);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 6px 12px;
+    border-radius: 4px;
+    background: rgba(255, 255, 255, 0.02);
+}
+
+.nav-phone-link:hover {
+    border-color: var(--color-accent);
+    color: var(--color-accent);
+    box-shadow: 0 0 10px rgba(255, 95, 21, 0.2);
+}
+
+[dir="rtl"] .nav-phone-link {
+    margin-right: 0;
+    margin-left: 15px;
+    direction: ltr;
+    /* Keep formatting of number predictable */
+}
+
 .icon-btn,
 .lang-btn,
 .menu-toggle {
@@ -122,7 +150,6 @@
 /* Specific Alignment for RTL/LTR handled by Flexbox direction */
 [dir="rtl"] .nav-links-container {
     justify-content: flex-start;
-    /* Or Flex-End based on user request? User said "Align to right for Arabic" which is 'start' in RTL? No 'start' is right in RTL. */
 }
 
 /* Mobile Menu */
@@ -134,6 +161,11 @@
     .menu-toggle {
         display: block;
         font-size: 1.2rem;
+    }
+
+    .nav-phone-link {
+        display: none;
+        /* Hide header phone on mobile to save space, will use sticky bar */
     }
 
     .nav-links-container {
