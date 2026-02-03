@@ -1,74 +1,71 @@
-.navbar {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    height: var(--header-height);
-    z-index: 1000;
-    transition: var(--transition);
+.nav-actions {
     display: flex;
     align-items: center;
+    gap: 15px;
+    margin-left: 20px;
+    /* In LTR */
 }
 
-.navbar.scrolled {
-    height: 70px;
-    background: var(--glass-bg);
-    backdrop-filter: blur(10px);
-    border-bottom: var(--glass-border);
-    box-shadow: var(--shadow-sm);
+[dir="rtl"] .nav-actions {
+    margin-left: 0;
+    margin-right: 20px;
 }
 
-.navbar-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-}
-
-.logo {
-    font-family: var(--font-heading);
-    font-size: 1.5rem;
-    font-weight: 700;
-    color: var(--color-accent);
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
-.logo-initials {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 40px;
-    height: 40px;
-    border: 2px solid var(--color-accent);
+.icon-btn,
+.lang-btn,
+.menu-toggle {
+    background: transparent;
+    border: 1px solid var(--color-steel-light);
+    color: var(--text-main);
+    padding: 5px 10px;
     border-radius: 4px;
-    /* Industrial feel - slight rounded or square */
-    color: var(--color-accent);
-}
-
-.logo-text {
-    color: var(--text-main);
-}
-
-.nav-links {
-    display: flex;
-    gap: 30px;
-    align-items: center;
-}
-
-.nav-links a {
-    color: var(--text-main);
+    cursor: pointer;
     font-family: var(--font-body);
-    /* Or heading usually for nav? Let's use body but thinner */
+    transition: var(--transition);
     font-size: 0.9rem;
-    font-weight: 500;
 }
 
-.nav-links a:hover {
+.icon-btn:hover,
+.lang-btn:hover,
+.menu-toggle:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: var(--color-accent);
     color: var(--color-accent);
 }
 
-.btn-sm {
-    padding: 8px 16px;
-    font-size: 0.85rem;
+.menu-toggle {
+    display: none;
+}
+
+@media (max-width: 900px) {
+    .menu-toggle {
+        display: block;
+        font-size: 1.2rem;
+    }
+
+    .nav-links-container {
+        position: fixed;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background: var(--bg-card);
+        padding: 20px;
+        border-bottom: 1px solid var(--color-steel);
+        transform: translateY(-200%);
+        transition: var(--transition);
+        z-index: 999;
+    }
+
+    .nav-links-container.open {
+        transform: translateY(0);
+    }
+
+    .nav-links {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .nav-links a {
+        font-size: 1.1rem;
+    }
 }

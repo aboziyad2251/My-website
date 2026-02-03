@@ -1,35 +1,95 @@
 :root {
-  /* Brand Colors */
-  --color-primary: #0A192F; /* Midnight Blue */
-  --color-primary-light: #112240;
-  --color-accent: #FF5F15; /* Safety Orange */
-  --color-accent-hover: #e55613;
-  --color-steel: #71797E; /* Steel Gray */
-  --color-steel-light: #a0aab5;
+  /* Common Defaults */
+  --transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+  --header-height: 80px;
+  --container-width: 1200px;
+  --font-heading: 'Outfit', sans-serif;
+  --font-body: 'Inter', sans-serif;
+}
 
-  /* Backgrounds & Text */
+/* ================= DARK THEME (Original Industrial) ================= */
+[data-theme='dark'] {
+  --color-primary: #0A192F;
+  --color-primary-light: #112240;
+  --color-accent: #FF5F15;
+  --color-accent-hover: #e55613;
+  --color-steel: #71797E;
+  --color-steel-light: #a0aab5;
   --bg-body: #050a14;
   --bg-card: rgba(17, 34, 64, 0.7);
   --text-main: #e6f1ff;
   --text-muted: #8892b0;
-  --text-highlight: #64ffda; /* Maybe use Orange for highlight? Sticking to prompts colors. */
-  
-  /* Fonts */
-  --font-heading: 'Outfit', sans-serif;
-  --font-body: 'Inter', sans-serif;
-
-  /* Layout */
-  --container-width: 1200px;
-  --header-height: 80px;
-  
-  /* Effects */
   --glass-bg: rgba(10, 25, 47, 0.85);
   --glass-border: 1px solid rgba(255, 255, 255, 0.1);
   --shadow-sm: 0 4px 6px rgba(0, 0, 0, 0.1);
   --shadow-md: 0 10px 30px -10px rgba(0, 0, 0, 0.5);
-  --transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
 }
 
+/* ================= LIGHT THEME (Professional) ================= */
+[data-theme='light'] {
+  --color-primary: #ffffff;
+  --color-primary-light: #f4f6f8;
+  --color-accent: #FF5F15;
+  /* Keep Brand Identity */
+  --color-accent-hover: #e55613;
+  --color-steel: #4a5568;
+  --color-steel-light: #718096;
+  --bg-body: #f8f9fa;
+  --bg-card: #ffffff;
+  --text-main: #1a202c;
+  --text-muted: #4a5568;
+  --glass-bg: rgba(255, 255, 255, 0.9);
+  --glass-border: 1px solid rgba(0, 0, 0, 0.05);
+  --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 10px 20px rgba(0, 0, 0, 0.08);
+}
+
+/* ================= VIBRANT THEME (Tech & Neon) ================= */
+[data-theme='vibrant'] {
+  --color-primary: #020c1b;
+  --color-primary-light: #0d192e;
+  --color-accent: #00f2ea;
+  /* Cyan Neon */
+  --color-accent-hover: #00c7c0;
+  --color-steel: #5f7488;
+  --color-steel-light: #8892b0;
+  --bg-body: #020c1b;
+  --bg-card: rgba(13, 25, 46, 0.7);
+  --text-main: #ccd6f6;
+  --text-muted: #8892b0;
+  --glass-bg: rgba(2, 12, 27, 0.85);
+  --glass-border: 1px solid rgba(0, 242, 234, 0.2);
+  /* Neon border */
+  --shadow-sm: 0 4px 6px rgba(0, 242, 234, 0.1);
+  --shadow-md: 0 10px 30px -10px rgba(0, 242, 234, 0.15);
+}
+
+/* RTL Support */
+[dir="rtl"] {
+  direction: rtl;
+  text-align: right;
+}
+
+[dir="rtl"] .hero-tagline {
+  border-left: none;
+  border-right: 3px solid var(--color-accent);
+  padding-left: 0;
+  padding-right: 20px;
+}
+
+[dir="rtl"] .about-text .lead {
+  border-left: none;
+  border-right: 4px solid var(--color-accent);
+  padding-left: 0;
+  padding-right: 20px;
+}
+
+[dir="rtl"] .project-item.reverse {
+  flex-direction: row;
+  /* In RTL, reverse is basically normal row for them */
+}
+
+/* Global Resets & Utils */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -46,10 +106,15 @@ body {
   color: var(--text-main);
   line-height: 1.6;
   overflow-x: hidden;
-  -webkit-font-smoothing: antialiased;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: var(--font-heading);
   color: var(--text-main);
   font-weight: 700;
@@ -57,9 +122,17 @@ h1, h2, h3, h4, h5, h6 {
   margin-bottom: 1rem;
 }
 
-h1 { font-size: 3.5rem; }
-h2 { font-size: 2.5rem; }
-h3 { font-size: 1.75rem; }
+h1 {
+  font-size: 3.5rem;
+}
+
+h2 {
+  font-size: 2.5rem;
+}
+
+h3 {
+  font-size: 1.75rem;
+}
 
 a {
   color: var(--color-accent);
@@ -80,7 +153,6 @@ img {
   display: block;
 }
 
-/* Utilities */
 .container {
   max-width: var(--container-width);
   margin: 0 auto;
@@ -91,12 +163,12 @@ img {
   padding: 100px 0;
 }
 
-.text-accent { color: var(--color-accent); }
-.text-steel { color: var(--color-steel-light); }
-.bg-glass {
-  background: var(--glass-bg);
-  backdrop-filter: blur(10px);
-  border: var(--glass-border);
+.text-accent {
+  color: var(--color-accent);
+}
+
+.text-steel {
+  color: var(--color-steel);
 }
 
 /* Buttons */
@@ -119,40 +191,77 @@ img {
 
 .btn-primary:hover {
   background-color: rgba(255, 95, 21, 0.1);
+  /* Note: hardcoded orange tint might look weird on neon theme, consider changing to var */
   transform: translateY(-2px);
+}
+
+/* Fix hover tint for neon */
+[data-theme='vibrant'] .btn-primary:hover {
+  background-color: rgba(0, 242, 234, 0.1);
 }
 
 .btn-fill {
   background-color: var(--color-accent);
+  color: [data-theme='light'] ? #fff: #050a14;
+  /* Determine text color based on contrast manually or complex calc */
   color: #fff;
 }
+
+[data-theme='vibrant'] .btn-fill {
+  color: #000;
+  font-weight: 800;
+}
+
+/* Neon usually needs black text */
 
 .btn-fill:hover {
   background-color: var(--color-accent-hover);
   transform: translateY(-2px);
 }
 
-/* Scrollbar */
-::-webkit-scrollbar {
-  width: 10px;
-}
-::-webkit-scrollbar-track {
-  background: var(--bg-body);
-}
-::-webkit-scrollbar-thumb {
-  background: var(--color-steel);
-  border-radius: 5px;
-}
-::-webkit-scrollbar-thumb:hover {
-  background: var(--color-accent);
-}
-
-/* Loaders/Animations */
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
 .fade-in {
   animation: fadeIn 0.8s ease-out forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Floating Actions */
+.floating-actions {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  z-index: 999;
+}
+
+.fab-btn {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  transition: var(--transition);
+  color: white;
+}
+
+.fab-btn:hover {
+  transform: translateY(-3px) scale(1.1);
+}
+
+.fab-whatsapp {
+  background-color: #25D366;
 }

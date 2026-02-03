@@ -1,29 +1,27 @@
 import React from 'react';
 import './About.css';
+import { useTheme } from '../../context/ThemeContext';
 
 const About = () => {
+    const { t } = useTheme();
     return (
         <section id="about" className="section about-section">
             <div className="container about-container">
                 <div className="about-content">
-                    <h2 className="section-title">About <span className="text-accent">Me</span></h2>
+                    <h2 className="section-title">{t('about.title')} <span className="text-accent">{t('about.title_accent')}</span></h2>
                     <div className="about-text">
-                        <p className="lead">
-                            With over 15 years of boots-on-the-ground experience at SABIC, I have evolved from mastering complex industrial processes to leading the next wave of operational efficiency: AI Integration:
-                        </p>
-                        <p>
-                            My career is defined by a unique fusion of <strong>PMP-certified project management</strong> and a deep-seated passion for <strong>Generative AI</strong>. Whether I am coordinating a $20M plant upgrade or mentoring the next generation of operators, my focus remains constant: leveraging data to drive safety, reduce costs, and foster a culture of continuous improvement.
-                        </p>
+                        <p className="lead">{t('about.lead')}</p>
+                        <p>{t('about.text')}</p>
                     </div>
 
                     <div className="about-highlights">
                         <div className="highlight-box">
-                            <h3>Education</h3>
-                            <p>Bachelor of Project Management<br /><span className="text-muted">Midocean University (Expected 2026)</span></p>
+                            <h3>{t('about.box1_title')}</h3>
+                            <p>{t('about.box1_text')}<br /><span className="text-muted">{t('certifications.edu_school')}</span></p>
                         </div>
                         <div className="highlight-box">
-                            <h3>Dual-Competency</h3>
-                            <p>Technical Expertise (DCS Extrusion) + <br />High-Level Leadership (TOT Certified)</p>
+                            <h3>{t('about.box2_title')}</h3>
+                            <p>{t('about.box2_text')}</p>
                         </div>
                     </div>
                 </div>

@@ -1,6 +1,8 @@
 import React from 'react';
+import { useTheme } from '../../context/ThemeContext';
 
 const Footer = () => {
+    const { t } = useTheme();
     return (
         <footer style={{
             padding: '30px 0',
@@ -10,7 +12,7 @@ const Footer = () => {
             fontSize: '0.9rem'
         }}>
             <div className="container">
-                <p>&copy; {new Date().getFullYear()} Mohammad Abotargah. All Rights Reserved.</p>
+                <p>&copy; {new Date().getFullYear()} Mohammad Abotargah. {t('footer.rights')}</p>
             </div>
         </footer>
     );
