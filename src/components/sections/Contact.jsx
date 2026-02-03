@@ -21,8 +21,8 @@ const Contact = () => {
                     </div>
                     <div className="detail-item">
                         <span className="detail-label">{t('contact.link_label')}</span>
-                        <a href="https://linkedin.com/in/mohammad-abotargah" target="_blank" rel="noopener noreferrer" className="detail-value link">
-                            /in/mohammad-abotargah
+                        <a href="https://www.linkedin.com/in/mohammad-ibrahim-a-abotargah-3a047ab7/" target="_blank" rel="noopener noreferrer" className="detail-value link">
+                            /in/mohammad-ibrahim-a-abotargah
                         </a>
                     </div>
                 </div>

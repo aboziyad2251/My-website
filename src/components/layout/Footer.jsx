@@ -23,7 +23,7 @@ const Footer = () => {
                     <div style={{ display: 'flex', gap: '15px' }}>
                         <a href="https://wa.me/966530656998" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--text-main)', fontSize: '1.5rem', transition: 'color 0.3s' }} title="WhatsApp">📱</a>
                         <a href="mailto:tarj123@gmail.com" style={{ color: 'var(--text-main)', fontSize: '1.5rem', transition: 'color 0.3s' }} title="Email">✉️</a>
-                        <a href="https://linkedin.com/in/mohammad-abotargah" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--text-main)', fontSize: '1.5rem', transition: 'color 0.3s' }} title="LinkedIn">🔗</a>
+                        <a href="https://www.linkedin.com/in/mohammad-ibrahim-a-abotargah-3a047ab7/" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--text-main)', fontSize: '1.5rem', transition: 'color 0.3s' }} title="LinkedIn">🔗</a>
                     </div>
                 </div>
 

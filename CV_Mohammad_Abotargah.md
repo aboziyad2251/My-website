@@ -1,7 +1,7 @@
 # MOHAMMAD ABOTARGAH
-**Location:** Jeddah, Saudi Arabia  
-**Email:** tarj123@gmail.com | **Phone & WhatsApp:** +966 530 656 998  
-**LinkedIn:** [linkedin.com/in/mohammad-abotargah](https://linkedin.com/in/mohammad-abotargah)
+**Location:** Jeddah, Saudi Arabia
+**Email:** tarj123@gmail.com | **Phone & WhatsApp:** +966 530 656 998
+**LinkedIn:** [LinkedIn](https://www.linkedin.com/in/mohammad-ibrahim-a-abotargah-3a047ab7/)
 
 ---
 
