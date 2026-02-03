@@ -33,7 +33,7 @@ const Hero = () => {
 
                     <div className="hero-actions">
                         <a href="#contact" className="btn btn-primary">Discuss a Project</a>
-                        <a href="#" className="btn btn-fill">Download Full CV</a>
+                        <a href="/resume.html" target="_blank" rel="noopener noreferrer" className="btn btn-fill">Download Full CV</a>
                     </div>
                 </div>
             </div>

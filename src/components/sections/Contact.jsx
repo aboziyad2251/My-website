@@ -29,7 +29,7 @@ const Contact = () => {
 
                 <div className="contact-actions">
                     <a href="mailto:tarj123@gmail.com" className="btn btn-fill btn-lg">Discuss a Project</a>
-                    <a href="#" className="btn btn-primary btn-lg">Download Full CV</a>
+                    <a href="/resume.html" target="_blank" rel="noopener noreferrer" className="btn btn-primary btn-lg">Download Full CV</a>
                 </div>
             </div>
         </section>
