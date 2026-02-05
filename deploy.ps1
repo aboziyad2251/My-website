@@ -29,9 +29,9 @@ scp ecosystem.config.js "$Server`:$RemoteDir"
 
 Write-Host "🔄 Starting application on server..."
 # Check if PM2 is installed, install if missing (requires npm)
-ssh $Server "command -v pm2 >/dev/null 2>&1 || (echo 'Installing PM2...' && npm install -g pm2)"
+ssh $Server -- "command -v pm2 >/dev/null 2>&1 || (echo 'Installing PM2...' && npm install -g pm2)"
 
 # Start/Restart app
-ssh $Server "cd $RemoteDir && pm2 reload ecosystem.config.js --env production || pm2 start ecosystem.config.js --env production"
+ssh $Server -- "cd $RemoteDir && pm2 reload ecosystem.config.js --env production || pm2 start ecosystem.config.js --env production"
 
 Write-Host "✅ Deployment complete!"
