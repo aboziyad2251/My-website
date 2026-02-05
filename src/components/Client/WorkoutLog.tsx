@@ -79,8 +79,8 @@ export default function WorkoutLog() {
                 <Typography variant="h6" gutterBottom color="primary">
                     {reliefMode ? 'LIGHT SESSION LOG' : 'LOG SET'}
                 </Typography>
-                <Grid container spacing={2}>
-                    <Grid item xs={12}>
+                <Box sx={{ display: 'flex', flexDirection: 'column', gap: 2 }}>
+                    <Box>
                         <TextField
                             fullWidth
                             label="Exercise Name"
@@ -88,8 +88,8 @@ export default function WorkoutLog() {
                             onChange={e => setName(e.target.value)}
                             variant="filled"
                         />
-                    </Grid>
-                    <Grid item xs={4}>
+                    </Box>
+                    <Box sx={{ display: 'flex', gap: 2 }}>
                         <TextField
                             type="number"
                             label="Sets"
@@ -98,8 +98,6 @@ export default function WorkoutLog() {
                             onChange={e => setSets(Number(e.target.value))}
                             variant="filled"
                         />
-                    </Grid>
-                    <Grid item xs={4}>
                         <TextField
                             type="number"
                             label="Reps"
@@ -108,8 +106,6 @@ export default function WorkoutLog() {
                             onChange={e => setReps(Number(e.target.value))}
                             variant="filled"
                         />
-                    </Grid>
-                    <Grid item xs={4}>
                         <TextField
                             type="number"
                             label="Kg"
@@ -118,9 +114,9 @@ export default function WorkoutLog() {
                             onChange={e => setWeight(Number(e.target.value))}
                             variant="filled"
                         />
-                    </Grid>
+                    </Box>
                     {!reliefMode && (
-                        <Grid item xs={12} sx={{ mt: 1 }}>
+                        <Box sx={{ mt: 1 }}>
                             <Typography gutterBottom variant="body2" color="text.secondary">RPE (Rate of Perceived Exertion)</Typography>
                             <Box sx={{ px: 2 }}>
                                 <Slider
@@ -131,9 +127,9 @@ export default function WorkoutLog() {
                                     color="secondary"
                                 />
                             </Box>
-                        </Grid>
+                        </Box>
                     )}
-                    <Grid item xs={12} sx={{ mt: 1 }}>
+                    <Box sx={{ mt: 1 }}>
                         <Button
                             variant="contained"
                             fullWidth
@@ -143,8 +139,8 @@ export default function WorkoutLog() {
                         >
                             ADD WORKOUT
                         </Button>
-                    </Grid>
-                </Grid>
+                    </Box>
+                </Box>
             </Paper>
 
             <Typography variant="h6" sx={{ mb: 2, opacity: 0.7 }}>RECENT LOGS</Typography>

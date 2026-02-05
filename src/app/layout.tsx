@@ -3,7 +3,7 @@ import type { Metadata } from 'next';
 import ThemeRegistry from '../components/ThemeRegistry/ThemeRegistry';
 
 export const metadata: Metadata = {
-  title: 'Client Coaching Portal',
+  title: 'AboZiyad Coaching',
   description: 'Industrial Strength Coaching',
 };
 

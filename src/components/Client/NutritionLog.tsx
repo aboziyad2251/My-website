@@ -79,17 +79,17 @@ export default function NutritionLog() {
         <Box sx={{ maxWidth: 600, mx: 'auto' }}>
             <Paper sx={{ p: 3, mb: 4 }}>
                 <Typography variant="h6" gutterBottom color="primary">DAILY MACROS</Typography>
-                <Grid container justifyContent="space-around" spacing={2}>
-                    <Grid item>
+                <Box sx={{ display: 'flex', justifyContent: 'space-around', gap: 2 }}>
+                    <Box>
                         <MacroCircle label="Protein" value={macros.protein} goal={dailyGoals.protein} color="#238636" field="protein" />
-                    </Grid>
-                    <Grid item>
+                    </Box>
+                    <Box>
                         <MacroCircle label="Carbs" value={macros.carbs} goal={dailyGoals.carbs} color="#58a6ff" field="carbs" />
-                    </Grid>
-                    <Grid item>
+                    </Box>
+                    <Box>
                         <MacroCircle label="Fats" value={macros.fats} goal={dailyGoals.fats} color="#da3633" field="fats" />
-                    </Grid>
-                </Grid>
+                    </Box>
+                </Box>
             </Paper>
 
             <Paper sx={{ p: 3 }}>

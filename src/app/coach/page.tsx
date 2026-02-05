@@ -45,31 +45,31 @@ export default function CoachDashboard() {
                 {macros && (
                     <Paper sx={{ mb: 4, p: 3, bgcolor: 'background.paper', border: '1px solid #30363d' }}>
                         <Typography variant="h6" gutterBottom color="primary">TODAY'S MACRO SNAPSHOT</Typography>
-                        <Grid container spacing={2}>
-                            <Grid item xs={4}>
+                        <Box sx={{ display: 'flex', gap: 2 }}>
+                            <Box sx={{ flex: 1 }}>
                                 <Box sx={{ p: 2, border: '1px solid #238636', borderRadius: 1, textAlign: 'center' }}>
                                     <Typography variant="caption" display="block">PROTEIN</Typography>
                                     <Typography variant="h4" color="primary">{macros.protein}g</Typography>
                                 </Box>
-                            </Grid>
-                            <Grid item xs={4}>
+                            </Box>
+                            <Box sx={{ flex: 1 }}>
                                 <Box sx={{ p: 2, border: '1px solid #58a6ff', borderRadius: 1, textAlign: 'center' }}>
                                     <Typography variant="caption" display="block">CARBS</Typography>
                                     <Typography variant="h4" sx={{ color: '#58a6ff' }}>{macros.carbs}g</Typography>
                                 </Box>
-                            </Grid>
-                            <Grid item xs={4}>
+                            </Box>
+                            <Box sx={{ flex: 1 }}>
                                 <Box sx={{ p: 2, border: '1px solid #da3633', borderRadius: 1, textAlign: 'center' }}>
                                     <Typography variant="caption" display="block">FATS</Typography>
                                     <Typography variant="h4" color="secondary">{macros.fats}g</Typography>
                                 </Box>
-                            </Grid>
-                        </Grid>
+                            </Box>
+                        </Box>
                     </Paper>
                 )}
 
-                <Grid container spacing={4}>
-                    <Grid item xs={12} md={7}>
+                <Box sx={{ display: 'flex', flexDirection: { xs: 'column', md: 'row' }, gap: 4 }}>
+                    <Box sx={{ flex: { md: 7 }, width: '100%' }}>
                         <Typography variant="h6" gutterBottom sx={{ color: 'text.secondary', borderBottom: '2px solid #238636', display: 'inline-block', mb: 2 }}>WORKOUT LOGS</Typography>
                         <TableContainer component={Paper} sx={{ maxHeight: 400 }}>
                             <Table stickyHeader size="small">
@@ -102,9 +102,9 @@ export default function CoachDashboard() {
                                 </TableBody>
                             </Table>
                         </TableContainer>
-                    </Grid>
+                    </Box>
 
-                    <Grid item xs={12} md={5}>
+                    <Box sx={{ flex: { md: 5 }, width: '100%' }}>
                         <Typography variant="h6" gutterBottom sx={{ color: 'text.secondary', borderBottom: '2px solid #58a6ff', display: 'inline-block', mb: 2 }}>NUTRITION LOGS</Typography>
                         <TableContainer component={Paper} sx={{ maxHeight: 400 }}>
                             <Table stickyHeader size="small">
@@ -131,8 +131,8 @@ export default function CoachDashboard() {
                                 </TableBody>
                             </Table>
                         </TableContainer>
-                    </Grid>
-                </Grid>
+                    </Box>
+                </Box>
             </Container>
         </Box>
     );
