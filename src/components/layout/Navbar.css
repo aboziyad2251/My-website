@@ -1,0 +1,207 @@
+/* Main Navigation Bar */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: var(--header-height);
+    z-index: 1000;
+    transition: var(--transition);
+    display: flex;
+    align-items: center;
+    background-color: transparent;
+}
+
+.navbar.scrolled {
+    height: 70px;
+    background: var(--glass-bg);
+    backdrop-filter: blur(10px);
+    border-bottom: var(--glass-border);
+    box-shadow: var(--shadow-sm);
+}
+
+.navbar-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+/* Logo */
+.logo {
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--color-accent);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+}
+
+.logo-initials {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border: 2px solid var(--color-accent);
+    border-radius: 4px;
+    color: var(--color-accent);
+}
+
+.logo-text {
+    color: var(--text-main);
+    white-space: nowrap;
+}
+
+/* Navigation Links (Desktop) */
+.nav-links-container {
+    display: flex;
+    align-items: center;
+    flex: 1;
+    justify-content: center;
+    margin: 0 40px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links a {
+    color: var(--text-main);
+    font-family: var(--font-body);
+    font-size: 0.95rem;
+    font-weight: 500;
+    text-decoration: none;
+    transition: var(--transition);
+    white-space: nowrap;
+}
+
+.nav-links a:hover {
+    color: var(--color-accent);
+}
+
+/* Buttons and Toggles */
+.nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+/* Phone in Navbar */
+.nav-phone-link {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--text-main);
+    font-weight: 700;
+    margin-right: 15px;
+    text-decoration: none;
+    transition: var(--transition);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 6px 12px;
+    border-radius: 4px;
+    background: rgba(255, 255, 255, 0.02);
+}
+
+.nav-phone-link:hover {
+    border-color: var(--color-accent);
+    color: var(--color-accent);
+    box-shadow: 0 0 10px rgba(255, 95, 21, 0.2);
+}
+
+[dir="rtl"] .nav-phone-link {
+    margin-right: 0;
+    margin-left: 15px;
+    direction: ltr;
+    /* Keep formatting of number predictable */
+}
+
+.icon-btn,
+.lang-btn,
+.menu-toggle {
+    background: transparent;
+    border: 1px solid var(--color-steel-light);
+    color: var(--text-main);
+    padding: 6px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-family: var(--font-body);
+    transition: var(--transition);
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icon-btn:hover,
+.lang-btn:hover,
+.menu-toggle:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: var(--color-accent);
+    color: var(--color-accent);
+}
+
+/* Specific Alignment for RTL/LTR handled by Flexbox direction */
+[dir="rtl"] .nav-links-container {
+    justify-content: flex-start;
+}
+
+/* Mobile Menu */
+.menu-toggle {
+    display: none;
+}
+
+@media (max-width: 900px) {
+    .menu-toggle {
+        display: block;
+        font-size: 1.2rem;
+    }
+
+    .nav-phone-link {
+        display: none;
+        /* Hide header phone on mobile to save space, will use sticky bar */
+    }
+
+    .nav-links-container {
+        position: fixed;
+        top: 70px;
+        /* Below Navbar */
+        left: 0;
+        width: 100%;
+        background: var(--bg-card);
+        backdrop-filter: blur(15px);
+        border-bottom: 1px solid var(--color-steel);
+        /* visible border */
+        transform: translateY(-200%);
+        /* Hidden by default */
+        transition: var(--transition);
+        z-index: 998;
+        flex-direction: column;
+        padding: 30px 0;
+        margin: 0;
+        height: auto;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    }
+
+    .nav-links-container.open {
+        transform: translateY(0);
+    }
+
+    .nav-links {
+        flex-direction: column;
+        gap: 25px;
+        width: 100%;
+        text-align: center;
+    }
+
+    .nav-links a {
+        font-size: 1.2rem;
+        display: block;
+    }
+}

@@ -1,0 +1,50 @@
+.device-preview-controls {
+    position: fixed;
+    bottom: 30px;
+    left: 30px;
+    /* Opposite to contact buttons */
+    z-index: 10000;
+    display: flex;
+    gap: 10px;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 8px;
+    border-radius: 30px;
+    backdrop-filter: blur(5px);
+}
+
+[dir="rtl"] .device-preview-controls {
+    left: auto;
+    right: 30px;
+}
+
+.preview-btn {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 1.5rem;
+    padding: 5px;
+    border-radius: 50%;
+    transition: transform 0.2s, background 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+}
+
+.preview-btn:hover {
+    background: rgba(255, 255, 255, 0.1);
+    transform: scale(1.1);
+}
+
+.preview-btn.active {
+    background: var(--color-accent);
+    box-shadow: 0 0 10px var(--color-accent);
+}
+
+/* Hide on actual small screens so users don't see dev tool */
+@media (max-width: 768px) {
+    .device-preview-controls {
+        display: none;
+    }
+}

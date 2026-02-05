@@ -1,0 +1,80 @@
+.expertise-section {
+    background-color: var(--bg-body);
+    position: relative;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 60px;
+    position: relative;
+    z-index: 2;
+}
+
+.expertise-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.expertise-card {
+    background: var(--bg-card);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    padding: 40px 30px;
+    border-radius: 8px;
+    /* Slightly rounded industrial */
+    transition: var(--transition);
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.expertise-card:hover {
+    background: rgba(20, 40, 70, 0.8);
+    transform: translateY(-10px);
+    border-color: var(--color-accent);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+.expertise-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 0;
+    background-color: var(--color-accent);
+    transition: var(--transition);
+}
+
+.expertise-card:hover::before {
+    height: 100%;
+}
+
+.card-icon {
+    color: var(--color-accent);
+    margin-bottom: 25px;
+    transition: var(--transition);
+}
+
+.expertise-card:hover .card-icon {
+    transform: scale(1.1);
+}
+
+.expertise-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: var(--text-main);
+}
+
+.expertise-card p {
+    color: var(--text-muted);
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+.expertise-card strong {
+    color: var(--text-main);
+    font-weight: 600;
+}
